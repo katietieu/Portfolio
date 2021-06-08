@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Katie Tieu | Tangible User Interfaces</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Katie Tieu</a> <!--remove?-->
+        <ul class="menu">
+            <li><a href="index.html#work">Back</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="textbox">
+            <h2>Tangible User Interfaces</h2>
+            <p>CPSC 599.88: Physical & Tangible HCI is one of the Special Topics courses at the University of Calgary.
+                <br><br>I took this course in winter 2020. In it, we created four "things" using Arduino microcontrollers. For each project we were given a prompt, but then were also required to add in an additional creative surprise.
+                <br><br>Fundamentally, I learned not only how to build new things with hardware, but also the importance of creativity and innovation--there is so much out there that we will never explore if we always think inside the box.</p>
+            <ul>
+                <li>Buttoning in the 90's</li>
+                <li>Musical Baby Mobile</li>
+                <li>Phone Jar</li>
+                <li>Wilson</li>
+            </ul>
+        </div>
+    </section>
+    <section class="button90">
+        <div class="heading whitebg">
+            <h2>Buttoning in the 90's</h2>
+        </div>
+    </section>
+    <section class="babymobile">
+        <div class="heading colouredbg">
+            <h2>Musical Baby Mobile</h2>
+        </div>
+    </section>
+    <section class="phonejar">
+        <div class="heading whitebg">
+            <h2>Phone Jar</h2>
+        </div>
+    </section>
+    <section class="wilson">
+        <div class="heading colouredbg">
+            <h2>Wilson</h2>
+        </div>
+    </section>
+
+    <script type ="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>

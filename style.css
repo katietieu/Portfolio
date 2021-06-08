@@ -4,10 +4,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
 }
 
 section {
-    padding: 100px 150px;
+    padding: 100px 120px;
 }
 
 .banner {
@@ -57,6 +58,14 @@ section {
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
+    transition: 0.5s;
+}
+.btn:hover {
+    background: #ACB4B4;
+}
+
+header.sticky .logo:hover, header.sticky ul li a:hover {
+    color: #ACB4B4
 }
 
 header {
@@ -64,7 +73,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 150px;
+    padding: 20px 120px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -74,7 +83,7 @@ header {
 header.sticky {
     background: #fff;
     padding: 20px 100px;
-    box-shadow: 0 5px 20 px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 20px rgba(0,0,0,0.1);
 }
 header .logo {
     color: #fff;
@@ -129,16 +138,29 @@ header.sticky ul li a {
 .contentBox p {
     line-height: 1.6;
 }
+
+.about {
+    background-color: #fff;
+    background-size: cover;
+}
 .about .content .selfie {
-    max-width: 40%;
+    max-width: 400px;
 }
 
 img {
     max-width: 100%;
 }
 
-.work {
+.work, .babymobile, .wilson {
     background-color: #ACB4B4;
+}
+.work .heading {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
 }
 .work .content {
     display: flex;
@@ -149,7 +171,8 @@ img {
 .work .content .workBox {
     position: relative;
     color: #fff;
-    max-width: 40%;
+    width: 480px;
+    height: 350px;
     margin: 2px;
     text-align: center;
     transition: 0.5s;
@@ -169,12 +192,12 @@ img {
 }
 .work .content .workBox .name {
     position: absolute;
-    top: 47%;
-    left: 20%;
+    top: 66%;
+    left: 5%;
     color: #fff;
-    background: rgba(0,0,0,.2);
+    background: rgba(0,0,0,.3);
     font-size: 1.5em;
-    width: 60%;
+    width: 90%;
     text-align: center;
 }
 
@@ -182,14 +205,152 @@ img {
     background: white;
 }
 .contact .content {
-    padding: 0px 100px 0px 100px;
+    max-width: 50%;
+    margin: auto;
 }
 .contact .content .contactBox {
     padding-bottom: 3px;
-    max-width: 12%;
+    margin: 0 30px;
+    width: 12%;
     transition: 0.3s;
     border-bottom: 5px solid white;
 }
 .contact .content .contactBox:hover {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #ACB4B4;
+}
+
+.whitebg {
+    border-bottom: 3px solid #ACB4B4;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+.colouredbg {
+    border-bottom: 3px solid #fff;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 991px){
+    header, header.sticky {
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,.2);
+    }
+    .menu.active {
+        left: 0;
+    }
+    header ul li a {
+        color: #111;
+        font-size: 24px;
+        margin: 10px;
+    }
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background: url(menu.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        filter: invert(1);
+    }
+    .toggle.active {
+        background: url(close.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+        filter: invert(1);
+    }
+    header.sticky .toggle {
+        filter: invert(0);
+    }
+    section {
+        padding: 100px 50px;
+    }
+    .banner {
+        padding: 150px 50px 100px;
+    }
+    .banner h2 {
+        font-size: 2.5em;
+    }
+    .banner h3 {
+        font-size: 1.2em;
+    }
+    .btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .heading h2 {
+        font-size: 24px;
+    }
+    .contentBox h3 {
+        font-size: 20px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .content p {
+        margin-bottom: 20px;
+    }
+    .content .selfie {
+        width: 100%;
+        margin: auto;
+    }
+
+    .work .content .workBox {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contact .content {
+        flex-direction: row;
+    }
+    .contact .content .contactBox {
+        padding: 0 5px 3px 5px;
+        margin: 0;
+        width: 35%;
+    }
+
+    .about .heading {
+        width: 40%;
+    }
+    .work .heading {
+        width: 40%;
+    }
+    .contact .heading {
+        width: 40%;
+    }
+}
+
+@media (max-width: 600px){
+    header, header.sticky {
+        padding: 20px 30px;
+    }
+    .banner {
+        padding: 150px 30px 100px;
+    }
+    section {
+        padding: 100px 30px;
+    }
 }

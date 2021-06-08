@@ -10,74 +10,87 @@
 <body>
     <header>
         <a href="#" class="logo">Katie Tieu</a>
-        <div class="toggle"></div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
         </ul>
     </header>
-    <section class="banner">
+    <section class="banner" id="home">
         <div class="textbox">
             <h2>Hi there, I'm<br><span>Katie.</span></h2>
             <h3>developer • designer • artist</h3>
-            <a href="#" class="btn">About Me</a>
+            <a href="#about" class="btn">About Me</a>
         </div>
         <div class="bgCitation">
             <p>Background - Yoshida Hiroshi, <i>Rapids</i></p>
         </div>
     </section>
-    <section class="about">
-        <div class="heading">
+
+    <section class="about" id="about">
+        <div class="heading whitebg">
             <h2>About Me</h2>
         </div>
         <div class="content">
             <div class="contentBox">
-                <h3>Computer eyes computerize computer lies lmao delete this later</h3>
-                <p>I completed my Bachelor of Science in Computer Science with a concentration in Human-Computer Interaction at the University of Calgary in 2020.
-                    Amidst the Strange circumstances and a global pandemic led me to the Ophthalmic and Optometric Assisting program at SAIT, which I completed in 2021.
-                <br><br>My main interests lie in UI/UX design. Outside of computer science you can find me drawing, gaming, reading webtoons, or kicking around a soccer ball with my friends.</p>
+                <h3>TODO: menu underline, work pages (rename to projects?), about me writing/pic</h3>
+                <p>I am a new graduate whose interest . I completed my Bachelor of Science in Computer Science with a concentration in Human-Computer Interaction at the University of Calgary in 2020.
+                    During my time there, I 
+                    </p>
             </div>
             <div class="selfie">
                 <img src="me.jpg" class="img">
             </div>
         </div>
     </section>
-    <section class="work">
-        <div class="heading">
+
+    <section class="work" id="work">
+        <div class="heading colouredbg">
             <h2>My Work</h2>
         </div>
         <div class="content">
-            <div class="workBox">
-                <img src="wilson.jpg">
-                <div class="name"><h4>Tangible User Interfaces</h4></div>
-            </div>
-            <div class="workBox">
-                <img src="teemo.jpg">
-                <div class="name"><h4>Human-Computer Interactions Work</h4></div>
-            </div>
-            <div class="workBox">
-                <img src="wliia.jpg">
-                <div class="name"><h4>Improvising the Future</h4></div>
-            </div>
+            <a href="tui.html">
+                <div class="workBox">
+                    <img src="wilson.jpg">
+                    <div class="name"><h4>Tangible User Interfaces</h4></div>
+                </div>
+            </a>
+            <a href="hci.html">
+                <div class="workBox">
+                    <img src="teemo.jpg">
+                    <div class="name"><h4>Human-Computer Interactions Work</h4></div>
+                </div>
+            </a>
+            <a href="improv.html">
+                <div class="workBox">
+                    <img src="wliia.jpg">
+                    <div class="name"><h4>Improvising the Future</h4></div>
+                </div>
+            </a>
+            <a href="billsplit.html">
+                <div class="workBox">
+                    <img src="billsplit.jpg">
+                    <div class="name"><h4>Billsplit</h4></div>
+                </div>
+            </a>
+            <a href=#>
+                <div class="workBox">
+                    <img src="billsplit.jpg">
+                    <div class="name"><h4>Restaurant Ordering System Prototype</h4></div>
+                </div>
+            </a>
             <div class="workBox">
                 <img src="billsplit.jpg">
-                <div class="name"><h4>Billsplit</h4></div>
-            </div>
-            <div class="workBox">
-                <img src="teemo.jpg">
-                <div class="name"><h4>PLACEHOLDER</h4></div>
-            </div>
-            <div class="workBox">
-                <img src="teemo.jpg">
-                <div class="name"><h4>PLACEHOLDER</h4></div>
+                <div class="name"><h4>...and more to come</h4></div>
             </div>
         </div>
     </section>
-    <section class="contact">
-        <div class="heading">
-            <h2>Contact</h2>
+
+    <section class="contact" id="contact">
+        <div class="heading whitebg">
+            <h2>Contact Me</h2>
         </div>
         <div class="content">
             <div class="contactBox">
@@ -91,11 +104,19 @@
             </div>
         </div>
     </section>
+
     <script type ="text/javascript">
         window.addEventListener('scroll', function(){
             var header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0);
         });
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
