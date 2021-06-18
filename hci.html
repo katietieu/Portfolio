@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Katie Tieu | Human-Computer Interactions</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
 </head>
 <body>
     <header>
@@ -13,19 +14,49 @@
             <li><a href="index.html#work">Back</a></li>
         </ul>
     </header>
-    <section class="banner" id="home">
+    <section class="hcibanner" id="home">
         <div class="textbox">
             <h2>Human-Computer Interactions</h2>
             <p>CPSC 581: Human-Computer Interaction II is the advanced HCI course at the University of Calgary.
-                <br><br>I took it in winter 2020, where I practiced techniques for designing interactive human-computer interfaces. The course consisted of four projects. Project 0 was created with Microsoft Visual Studio 2017, Project 1 with Android Studio, Project 2 using Arduino, and Project 3 with HTML/CSS/JavaScript.
+                <br><br>I took it in winter 2020, where I practiced techniques for designing interactive human-computer interfaces. The course consisted of four projects, created respectively using Microsoft Visual Studio 2017, Android Studio, Arduino, and HTML/CSS/JavaScript.
                 <br><br>Like my Tangibles course, HCI II emphasized creative thinking. HCI II comparatively pushed for more practical outcomes and stressed the design process: sketching, critiquing and refining, and then implementing. Overall, my greatest takeaway from the course is the importance of sketching. Inspiration strikes at any moment, and it is important that you are able to capture it, build on it (or not), and explore different options.</p>
             <ul>
                 <li>The Teemo Button</li>
-                <li>Smartphone Interaction Workaround</li>
+                <li>Lockscreen Workaround</li>
                 <li>Alarm Pillow</li>
                 <li>Duo Calendar</li>
             </ul>
         </div>
     </section>
+    <section class="teemo">
+        <div class="heading whitebg">
+            <h2>The Teemo Button</h2>
+        </div>
+        <div class="buttoncontent">
+            <h3>The task:</h3>
+        </div>
+    </section>
+    <section class="smartphone">
+        <div class="heading colouredbg">
+            <h2>Lockscreen Workaround</h2>
+        </div>
+    </section>
+    <section class="alarmpillow">
+        <div class="heading whitebg">
+            <h2>Alarm Pillow</h2>
+        </div>
+    </section>
+    <section class="duocalendar">
+        <div class="heading colouredbg">
+            <h2>Duo Calendar</h2>
+        </div>
+    </section>
+
+    <script type ="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
 </body>
 </html>

@@ -128,7 +128,7 @@ header.sticky ul li a {
     justify-content: space-between;
 }
 .contentBox {
-    padding-right: 30px;
+    padding-right: 50px;
     min-width: 50%;
 }
 .contentBox h3 {
@@ -151,7 +151,7 @@ img {
     max-width: 100%;
 }
 
-.work, .babymobile, .wilson {
+.work, .babymobile, .wilson, .smartphone, .duocalendar {
     background-color: #ACB4B4;
 }
 .work .heading {
@@ -233,8 +233,44 @@ img {
     margin-right: auto;
     padding-bottom: 10px;
 }
+/* tui projects */
+.tuibanner {
+    background: url(arduino2.jpg); /* https://pxhere.com/en/photo/665497 */
+    background-size: cover;
+    height: 100vh;
+}
+.tuibanner .textbox, .hcibanner .textbox {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    max-width: 60%;
+    color: #fff;
+    background-color: rgba(0,0,0,0);
+}
+.tuibanner .textbox h2, .hcibanner .textbox h2 {
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+.tuibanner .textbox ul, .hcibanner .textbox ul {
+    margin-top: 20px;
+    padding-left: 3em;
+}
+.button90 .buttoncontent p {
+    margin-bottom: 30px;
+}
 
-/* Responsive */
+.hcibanner {
+    background: url(prototyping.jpg); /* https://pixabay.com/photos/ux-prototyping-design-webdesign-788002/ */
+    background-size: cover;
+    height: 100vh;
+}
+
+/* RESPONSIVE */
 @media (max-width: 991px){
     header, header.sticky {
         padding: 20px 50px;
