@@ -65,7 +65,7 @@ section {
 }
 
 header.sticky .logo:hover, header.sticky ul li a:hover {
-    color: #ACB4B4
+    color: #ACB4B4;
 }
 
 header {
@@ -151,7 +151,7 @@ img {
     max-width: 100%;
 }
 
-.work, .babymobile, .wilson, .smartphone, .duocalendar {
+.work, .smartphone, .duocalendar {
     background-color: #ACB4B4;
 }
 .work .heading {
@@ -162,7 +162,7 @@ img {
     margin-right: auto;
     padding-bottom: 10px;
 }
-.work .content {
+.work .content, .building {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -219,7 +219,7 @@ img {
     border-bottom: 5px solid #ACB4B4;
 }
 
-.whitebg {
+.whitebggreen {
     border-bottom: 3px solid #ACB4B4;
     width: 25%;
     margin-left: auto;
@@ -227,15 +227,21 @@ img {
     padding-bottom: 10px;
 }
 .colouredbg {
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #eee;
     width: 25%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 10px;
 }
+
+.backbtn, header.sticky .backbtn, header.sticky .tuimenu li a:hover, .tuimenu li.active a {
+    font-weight: bold;
+    color: #44809E;
+}
+
 /* tui projects */
 .tuibanner {
-    background: url(arduino2.jpg); /* https://pxhere.com/en/photo/665497 */
+    background: url(arduino.jpg); /* https://pxhere.com/en/photo/665497 */
     background-size: cover;
     height: 100vh;
 }
@@ -260,10 +266,100 @@ img {
     margin-top: 20px;
     padding-left: 3em;
 }
-.button90 .buttoncontent p {
-    margin-bottom: 30px;
+
+.tuibanner .textbox ul {
+    list-style-type: decimal;
 }
 
+.tuicontent h3 {
+    margin-top: 2em;
+}
+.tuicontent p {
+    line-height: 1.6;
+}
+
+.building .step {
+    max-width: 50vh;
+}
+.building .step .stepimg, .building .step video {
+    height: 35vh;
+    width: 50vh;
+    margin: auto;
+    padding: 20px 10px 0 10px;
+}
+.building .step h5 {
+    text-align: center;
+    overflow-wrap: break-word;
+}
+.finalimg img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    max-width: 50vh;
+}
+.finalimg h5 {
+    text-align: center;
+}
+.codelinks li {
+    margin-left: 3em;
+}
+
+.finalvideo video {
+    display: block;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+.finalvideo h4 {
+    text-align: center;
+}
+.brainstorm {
+    display: flex;
+}
+.brainstorm .entry{
+    max-width: 50%;
+    max-height: 35%;
+    margin: 10px auto 15px auto;
+}
+.brainstorm .entry h5 {
+    text-align: center;
+}
+.materials {
+    display: block;
+}
+.materialslist {
+    margin-left: 3em;
+    columns: 3;
+}
+/* .materialslist li {
+    float: left;
+    width: 33.3%;
+} */
+.circuitschematic {
+    max-height: 80vh;
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+.whitebgblue {
+    border-bottom: 3px solid #44809E;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+.altcolourlink {
+    color: #febd69;
+}
+
+.babymobile, .wilson {
+    background: #44809E;
+}
+
+/* hci */
 .hcibanner {
     background: url(prototyping.jpg); /* https://pixabay.com/photos/ux-prototyping-design-webdesign-788002/ */
     background-size: cover;
@@ -376,6 +472,14 @@ img {
     }
     .contact .heading {
         width: 40%;
+    }
+
+    .finalvideo video {
+        max-width: 100%;
+    }
+    .materialslist li {
+        float: left;
+        width: 100%;
     }
 }
 
