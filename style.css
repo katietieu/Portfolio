@@ -245,13 +245,16 @@ img {
     background-size: cover;
     height: 100vh;
 }
+.tuibanner p, .hcibanner p {
+    line-height: 1.6;
+}
 .tuibanner .textbox, .hcibanner .textbox {
     margin: 0;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    max-width: 60%;
+    max-width: 65%;
     color: #fff;
     background-color: rgba(0,0,0,0);
 }
@@ -507,6 +510,9 @@ img {
         width: 100%;
     }
 
+    .tuibanner .textbox, .hcibanner .textbox {
+        max-width: 100%;
+    }
     .footer {
         height: 10vh;
     }

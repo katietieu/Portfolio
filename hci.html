@@ -9,44 +9,49 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">Katie Tieu</a> <!--remove?-->
+        <a href="index.html" class="logo" style="color: #fcbf3a;">Katie Tieu</a> <!--remove?-->
         <ul class="menu">
-            <li><a href="index.html#work">Back</a></li>
+            <li><a href="#top" onclick="toggleMenu();">Overview</a></li>
+            <li><a href="#teemo" onclick="toggleMenu();">The Teemo Button</a></li>
+            <li><a href="#smartphone" onclick="toggleMenu();">Lockscreen Workaround</a></li>
+            <li><a href="#alarmpillow" onclick="toggleMenu();">Alarm Pillow</a></li>
+            <li><a href="#duocalendar" onclick="toggleMenu();">Duo Calendar</a></li>
+            <li><a href="index.html#projects" class="backbtn" style="color:#fcbf3a;">Back to projects</a></li>
         </ul>
     </header>
-    <section class="hcibanner" id="home">
+    <section class="hcibanner" id="top">
         <div class="textbox">
             <h2>Human-Computer Interactions</h2>
-            <p>CPSC 581: Human-Computer Interaction II is the advanced HCI course at the University of Calgary.
-                <br><br>I took it in winter 2020, where I practiced techniques for designing interactive human-computer interfaces. The course consisted of four projects, created respectively using Microsoft Visual Studio 2017, Android Studio, Arduino, and HTML/CSS/JavaScript.
-                <br><br>Like my Tangibles course, HCI II emphasized creative thinking. HCI II comparatively pushed for more practical outcomes and stressed the design process: sketching, critiquing and refining, and then implementing. Overall, my greatest takeaway from the course is the importance of sketching. Inspiration strikes at any moment, and it is important that you are able to capture it, build on it (or not), and explore different options.</p>
-            <ul>
-                <li>The Teemo Button</li>
-                <li>Lockscreen Workaround</li>
-                <li>Alarm Pillow</li>
-                <li>Duo Calendar</li>
-            </ul>
+            <p>CPSC 581: Human-Computer Interaction II is the advanced HCI course at the University of Calgary. I took it in winter 2020.
+                <br><br>In it, I practiced techniques for designing interactive human-computer interfaces. The course consisted of four projects, created respectively using Microsoft Visual Studio 2017, Android Studio, Arduino, and HTML/CSS/JavaScript.
+                <br><br>This class emphasized creative thinking while pushing for more practical outcomes. It stressed the design process: sketching, critiquing and refining, and then implementing. Overall, my greatest takeaway is that inspiration strikes at any moment — it is important that you are able to capture it, build on it (or decide not), and explore different options.</p>
+            <a href="#button" class="btn" style="background-color: #fcbf3a;">Let's go</a>
         </div>
     </section>
-    <section class="teemo">
+    <section class="teemo" id="teemo">
         <div class="heading whitebg">
             <h2>The Teemo Button</h2>
         </div>
-        <div class="buttoncontent">
+        <div class="finalvideo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8OW6cw5ngQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 5px;"></iframe>
+            <h4>Catch him if you can! Here is the final Teemo Button.</h4>
+        </div>
+        <div class="tuicontent">
             <h3>The task:</h3>
+            <p>Sketch, design, and implement a software application where the central interaction is with a button, such that the interaction represents some aspect of your client's personality or character.</p>
         </div>
     </section>
-    <section class="smartphone">
+    <section class="smartphone" id="smartphone">
         <div class="heading colouredbg">
             <h2>Lockscreen Workaround</h2>
         </div>
     </section>
-    <section class="alarmpillow">
+    <section class="alarmpillow" id="alarmpillow">
         <div class="heading whitebg">
             <h2>Alarm Pillow</h2>
         </div>
     </section>
-    <section class="duocalendar">
+    <section class="duocalendar" id="duocalendar">
         <div class="heading colouredbg">
             <h2>Duo Calendar</h2>
         </div>
